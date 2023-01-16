@@ -27,5 +27,6 @@ namespace WebApiCoreLecture.Model
         public int DesignationID { get; set; }
         [NotMapped]
         public string Designation { get; set; }
+        public string imagepath { get; set; }
     }
 }
