@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using WebApiCoreLecture.Model;
-
+using WebApiCoreLecture.Controllers;
 namespace WebApiCoreLecture.Controllers
 {
     [Route("api/[controller]")]
@@ -17,10 +17,7 @@ namespace WebApiCoreLecture.Controllers
 
         private readonly EmployeeContext _context;
 
-        public UploadController(EmployeeContext context)
-        {
-            _context = context;
-        }
+      
 
         [HttpPost,DisableRequestSizeLimit]
         public IActionResult upload()
@@ -39,6 +36,8 @@ namespace WebApiCoreLecture.Controllers
                     {
                         file.CopyTo(stream);
                     }
+                  
+                    
                     return Ok(new { dbPath });
                 }
                 else

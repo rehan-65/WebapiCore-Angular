@@ -22,6 +22,10 @@ namespace WebApiCoreLecture.Controllers
             _context = context;
         }
 
+        public EmployeeController()
+        {
+        }
+
         // GET: api/Employee
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TblEmployee>>> GetTblEmployee()
@@ -101,6 +105,7 @@ namespace WebApiCoreLecture.Controllers
         [HttpPost]
         public async Task<ActionResult<TblEmployee>> PostTblEmployee(TblEmployee tblEmployee)
         {
+
             _context.TblEmployee.Add(tblEmployee);
             await _context.SaveChangesAsync();
 

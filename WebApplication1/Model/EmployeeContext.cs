@@ -13,5 +13,6 @@ namespace WebApiCoreLecture.Model
         }
         public DbSet<TblEmployee> TblEmployee { get; set; }
         public DbSet<TblDesignation> TblDesignation { get; set; }
+        public DbSet<Tblfile> Tblfile { get; set; }
     }
 }
